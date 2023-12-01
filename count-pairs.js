@@ -37,7 +37,7 @@ function countPairs(arr, num) {
 
     // sort array
 
-    const sortedArr = arr.sort((a,b) => a-b)
+    arr.sort((a,b) => a-b)
 
     // start a counter
 
@@ -46,12 +46,12 @@ function countPairs(arr, num) {
     // multiple pointers
 
     let left = 0
-    let right = (sortedArr.length - 1)
+    let right = (arr.length - 1)
 
 
     while(left < right) {
 
-        let sum = sortedArr[left] + sortedArr[right];
+        let sum = arr[left] + arr[right];
 
         if(sum === num){
 
@@ -76,3 +76,27 @@ function countPairs(arr, num) {
 };
 
 module.exports = countPairs
+
+
+// NOTE - O(n) way -
+
+/*
+
+function countPairs(arr, num) {
+    let seen = new Set();
+    let counter = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        const complement = num - arr[i];
+
+        if (seen.has(complement)) {
+            counter++;
+        }
+
+        seen.add(arr[i]);
+    }
+
+    return counter;
+}
+
+*/
