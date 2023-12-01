@@ -35,20 +35,22 @@ expect(constructNote("aa", "abcd")).toBe(false);
 
 // freqCounter
 
-function freqCounter(str){
+// function freqCounter(str){
 
-    let frequencies = new Map();
+//     let frequencies = new Map();
 
-    for (let val of str) {
+//     for (let val of str) {
 
-        let valCount = frequencies.get(val) || 0;
-        frequencies.set(val, valCount + 1);
+//         let valCount = frequencies.get(val) || 0;
+//         frequencies.set(val, valCount + 1);
 
-    }
+//     }
 
-    return frequencies
+//     return frequencies
 
-}
+// }
+
+const freqCounter = require('./freq-counter')
 
 function constructNote(message = [], letters = []) {
 
