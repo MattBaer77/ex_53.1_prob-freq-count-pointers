@@ -28,7 +28,7 @@ function sameFrequency(int1, int2) {
     // Possible Optimization for certain cases.
 
     // get frequency of digits in int1
-    // get freqency of digits in int2
+    // get frequency of digits in int2
 
     // for each digit of int1 compare to same of int 2
     // if ever different return false
